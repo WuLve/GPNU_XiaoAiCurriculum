@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta charset="utf-8" />
+        <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="320" name="MobileOptimized">
+		<title>欢迎使用小爱课程表</title>
+		<style type="text/css">a{text-decoration:none}</style>
+	</head>
+	
+	<body>
+        <br>
+		<center>
+		<br>——————————————————
+		<br>【选择当前网络】
+	    <br>——————————————————
+		<br><button onclick="gotoCampusNetwork()">当前处于校园网</button>
+		<br>	
+		<br><button onclick="gotoOffCampusNetwork()">当前处于校外网</button>
+		<br>
+		<br><input id="inputurl" type="text" onkeydown="if(event.keyCode==13) {gotoOther()}" placeholder="请输入自定义网址" /><button onclick="gotoOther()">跳转</button><div id="html"></div>
+	    <br>——————————————————
+		</center>
+		<br>
+		<br>
+		课程导入步骤：选择网络环境 → 登录账号 → 信息查询 → 学生课表查询 → 一键导入
+		<br>
+		<br>
+		外网连接学校可能会更换,建议连接校园网打开。<br>
+		外网连接无法打开请联系：wulve@qq.com
+		<script type="text/javascript"> 
+		document.write("<link rel='stylesheet' type='text/css' href='/css/layout.css?v="+new Date().getTime()+"'>");   
+		var othernetwork=document.getElementById("inputurl")
+		function gotoCampusNetwork()
+		{	
+			alert("正在跳转，请等候……");
+			window.location.replace("http://202.192.72.43/jwglxt/server.htm");
+		}
+		function gotoOffCampusNetwork()
+		{
+			alert("正在跳转，请等候……如果无法打开建议使用内网连接");
+			window.location.replace("http://61.144.34.62:666/jwglxt/xtgl/login_slogin.html");
+		}
+		function gotoOther()
+		{
+			window.location.replace(""+othernetwork.value+"");
+		}
+		</script>
+	</body>
+</html>
