@@ -21,7 +21,7 @@
 		<br>	
 		<br><button onclick="gotoOffCampusNetwork()">当前处于校外网</button>
 		<br>
-		<br><input id="inputurl" type="text" onkeydown="if(event.keyCode==13) {gotoOther()}" placeholder="请输入自定义网址" /><button onclick="gotoOther()">跳转</button><div id="html"></div>
+		<br><input id="inputurl" type="text" onkeydown="if(event.keyCode==13) {gotoOther()}" placeholder="自定义教务平台网址" /><button onclick="gotoOther()">跳转</button><div id="html"></div>
 	    <br>——————————————————
 		</center>
 		<br>
@@ -30,6 +30,7 @@
 		<br>
 		<br>
 		外网连接学校可能会更换,建议连接校园网打开。<br>
+		如果学校更新外网连接，可自定义教务网页进行导入。<br>
 		外网连接无法打开请联系：wulve@qq.com
 		<script type="text/javascript"> 
 		document.write("<link rel='stylesheet' type='text/css' href='/css/layout.css?v="+new Date().getTime()+"'>");   
@@ -46,6 +47,7 @@
 		}
 		function gotoOther()
 		{
+		    alert("正在打开，请等候……");
 			window.location.replace(""+othernetwork.value+"");
 		}
 		</script>
