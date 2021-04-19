@@ -1,4 +1,4 @@
-//2021/4/19
+//2021/4/20
 function vzin(me) {
     const timeThruster = (timeRaw, distance) => {
         let [timeRawHour, timeRawMinute] = timeRaw.split(':')
