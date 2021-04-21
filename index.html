@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!--HTML清理缓存-->
         <META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
         <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
         <META HTTP-EQUIV="expires" CONTENT="0"> 
+		<!--设置字符格式及适配手机格式-->
 	    <meta charset="utf-8" />
         <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
         <meta content="yes" name="apple-mobile-web-app-capable">
@@ -16,57 +18,72 @@
 	</head>
 	
 	<body>
-    <table width="100%" border="0">
-  <tr>
-    <th scope="col"><strong><p>选择当前网络</p></strong></th>
-  </tr>
-  <tr>
-    <th scope="col"><button onclick="gotoCampusNetwork()">当前处于校园网</button></td>
-  </tr>
-  <tr>
-    <th scope="col"><button onclick="gotoOffCampusNetwork()">当前处于校外网</button></td>
-  </tr>
-  <tr>
-    <th scope="col"><input id="inputurl" type="text" onkeydown="if(event.keyCode==13) {gotoOther()}" placeholder="自定义教务平台网址" /><button onclick="gotoOther()">跳转</button><div id="html"></div>
-  </tr>
-</table>
+    
+		<table width="100%" border="0">
+		  <tr>
+			<th scope="col"><strong><p>选择当前网络</p></strong></th>
+		  </tr>
+		  
+		  <tr>
+			<th scope="col"><button onclick="gotoCampusNetwork()">当前处于校园网</button>
+		  &nbsp;<button onclick="gotoOffCampusNetwork()">当前处于校外网</button></th>
+		  </tr>
+		  
+		  <tr>
+		  
+		  </tr>
+		  
+		  <tr>
+			<th scope="col"><input id="inputurl" type="text" onkeydown="if(event.keyCode==13) {gotoOther()}" placeholder="自定义教务平台网址" />&nbsp;<button onclick="gotoOther()">跳转</button><div id="html"></div>
+		  </tr>
+		</table>
 
 		<br>
 		<br>
 		课程导入步骤：选择网络环境 → 登录账号 → 一键导入
 		<br>
         <br>
+
         <details open>
         <summary>更新</summary>
 		<br>
         · 可根据不同校区自动适配不同时间安排
         <br><div align="right">2021/04/20</div>
-		<br>
         </details>
+
 		<details>
         <summary>备注信息</summary>
-		外网连接学校可能会更换,<br>建议连接校园网打开。<br>
-		如果学校更新外网连接，<br>可自定义教务网页进行导入。<br>
-		联系：wulve@qq.com
+		&nbsp;&nbsp;外网连接学校可能会更换,<br>&nbsp;&nbsp;建议连接校园网打开。<br>
+		&nbsp;&nbsp;如果学校更新外网连接，<br>&nbsp;&nbsp;可自定义教务网页进行导入。<br>
+		&nbsp;&nbsp;联系：wulve@qq.com
         </details>
-		<script type="text/javascript"> 
-		document.write("<link rel='stylesheet' type='text/css' href='/css/layout.css?v="+new Date().getTime()+"'>");   
-		var othernetwork=document.getElementById("inputurl")
-		function gotoCampusNetwork()
-		{	
-			alert("正在跳转，请等候……");
-			window.location.replace("http://10.0.10.184/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default&su=");
-		}
-		function gotoOffCampusNetwork()
-		{
-			alert("正在跳转，请等候……如果无法打开建议使用内网连接");
-			window.location.replace("https://10-0-10-184.webvpn.gpnu.edu.cn/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default&su=");
-		}
-		function gotoOther()
-		{
-		    alert("正在打开，请等候……");
-			window.location.replace(""+othernetwork.value+"");
-		}
-		</script>
+
+		
+
 	</body>
+
+	<script type="text/javascript"> 
+	document.write("<link rel='stylesheet' type='text/css' href='/css/layout.css?v="+new Date().getTime()+"'>");   
+	var othernetwork=document.getElementById("inputurl")
+
+	function gotoCampusNetwork()
+	{	
+		alert("正在跳转，请等候……");
+		window.location.replace("http://10.0.10.184/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default&su=");
+	}
+
+	function gotoOffCampusNetwork()
+	{
+		alert("正在跳转，请等候……如果无法打开建议使用内网连接");
+		window.location.replace("https://10-0-10-184.webvpn.gpnu.edu.cn/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?gnmkdm=N2151&layout=default&su=");
+	}
+
+	function gotoOther()
+	{
+	    alert("正在打开，请等候……");
+		window.location.replace(""+othernetwork.value+"");
+	}
+	</script>
+
+
 </html>
