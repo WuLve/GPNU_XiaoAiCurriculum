@@ -10,5 +10,7 @@
  
  #### 关于项目
   Gitee：https://gitee.com/wulve/GPNU_XiaoAiCurriculum
+  
   Github：https://github.com/WuLve/GPNU_XiaoAiCurriculum
+  
   Email：ouwulve@outlook.com
